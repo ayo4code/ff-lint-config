@@ -1,9 +1,11 @@
+const path = require('path')
+
 module.exports = {
 	'env': {
 		'browser': true,
 		'es2021': true
 	},
-	// 'extends': [require.resolve('./dist')],
+	'extends': require.resolve(path.join(__dirname, 'dist/eslint-config-ts')),
 	'overrides': [
 		{
 			'env': {
@@ -17,36 +19,8 @@ module.exports = {
 			}
 		}
 	],
-	'parser': '@typescript-eslint/parser',
-	'parserOptions': {
-		'ecmaVersion': 'latest',
-		'sourceType': 'module'
-	},
-	'plugins': [
-		'@typescript-eslint'
-	],
-	"rules": {
-		'indent': [
-			'error',
-			'tab'
-		],
-	}
-	// 'rules': {
-	// 	'indent': [
-	// 		'error',
-	// 		'tab'
-	// 	],
-	// 	'linebreak-style': [
-	// 		'error',
-	// 		'unix'
-	// 	],
-	// 	'quotes': [
-	// 		'error',
-	// 		'single'
-	// 	],
-	// 	'semi': [
-	// 		'error',
-	// 		'always'
-	// 	]
-	// }
-};
+	// "parserOptions": {
+	// 	"ecmaVersion": "latest",
+	// 	"sourceType": "module"
+	// },
+}

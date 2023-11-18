@@ -1,30 +1,26 @@
 {
-  "name": "ff-node-package-starter",
+  "name": "eslint-plugin-ff",
   "type": "commonjs",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "module": "./dist/index.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsup src/index.ts --clean --dts --watch",
-    "build": "tsup src/index.ts --format cjs --clean --dts"
+    "dev": "tsup src --clean --dts --watch",
+    "build": "tsup src/index.ts --format cjs --clean --dts",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "jqyao",
   "license": "ISC",
   "devDependencies": {
     "@types/lodash-es": "^4.17.10",
+    "@types/node": "^20.9.0",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "eslint": "^8.53.0",
@@ -32,10 +28,19 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "lodash-es": "^4.17.21"
+  },
+  "lint-staged": {
+    "src/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --write"
+    ]
   }
 }

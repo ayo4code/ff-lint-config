@@ -18,4 +18,7 @@ export const reactRules = {
   'react/react-in-jsx-scope': 0,
   'react/jsx-one-expression-per-line': 0,
   'react/jsx-key': 1,
+  /**
+   * hooks
+   */
 }
