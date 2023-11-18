@@ -9,7 +9,6 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsup src --clean --dts --watch",
     "build": "tsup src/index.ts --format cjs --clean --dts",
     "prepare": "husky install",
@@ -33,9 +32,6 @@
     "prettier": "^3.1.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "lodash-es": "^4.17.21"
   },
   "lint-staged": {
     "src/*.{js,jsx,ts,tsx}": [
