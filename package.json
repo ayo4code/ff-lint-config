@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-ff",
+  "name": "ff-lint-config",
   "type": "commonjs",
   "version": "1.0.0",
   "description": "",
@@ -10,9 +10,10 @@
   ],
   "scripts": {
     "dev": "tsup src --clean --dts --watch",
-    "build": "tsup src/index.ts --format cjs --clean --dts",
+    "build": "tsup src --format cjs --clean --dts",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "release": "npm run build && npm publish"
   },
   "keywords": [],
   "author": "jqyao",

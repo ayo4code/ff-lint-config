@@ -5,7 +5,7 @@ module.exports = {
 		'browser': true,
 		'es2021': true
 	},
-	'extends': require.resolve(path.join(__dirname, 'dist/eslint-config-ts')),
+	'extends': require.resolve(path.join(__dirname, 'dist/eslint-config-node')),
 	'overrides': [
 		{
 			'env': {
